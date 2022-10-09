@@ -42,6 +42,12 @@ class RestaurantTest {
         assertFalse(rest.isRestaurantOpen());
     }
 
+    @Test
+    public void item_added_to_menu_should_return_the_price_greater_than_zero() {
+        restaurant.addToMenu("Sizzling brownie",319);
+        int price = restaurant.getSelectedItemPrice();
+        assertEquals(707, price);
+    }
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
